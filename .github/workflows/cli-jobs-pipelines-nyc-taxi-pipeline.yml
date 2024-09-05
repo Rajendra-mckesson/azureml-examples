@@ -58,7 +58,8 @@ jobs:
       run: |
           source "${{ github.workspace }}/infra/bootstrapping/sdk_helpers.sh";
           source "${{ github.workspace }}/infra/bootstrapping/init_environment.sh";
-          bash -x ../../../run-job.sh pipeline.yml
+          #bash -x ../../../run-job.sh pipeline.yml
+          az ml job create -f pipeline.yml
       working-directory: cli/jobs/pipelines/nyc-taxi
     - name: validate readme
       run: |
