@@ -53,9 +53,9 @@ export PREFIX=aml
 export SUFFIX=sdkv202
 export APP_NAME="github-sp-amlsdkv2-gh-2"
 export timestamp=$(date +%s)
-# export RESOURCE_GROUP_NAME=test-data-rg
-# export WORKSPACE_NAME=${PREFIX}${SUFFIX}${DATE_ONLY}-ws
-# export SUBSCRIPTION_ID=test
+export RESOURCE_GROUP_NAME="rg-Nexus-prod"
+export WORKSPACE_NAME="ws-psas-ea-nexus-prod"
+export SUBSCRIPTION_ID="94f6c1e3-0811-4299-8f97-fe79cf20b55e"
 # export AZURE_SERVICE_PRINCIPAL="github-sp-${PREFIX}${SUFFIX}"
 
 # check if the required variables are specified.
@@ -76,7 +76,7 @@ fi
 
 if [[ -z "$LOCATION" ]]
 then
-    export LOCATION="eastus"
+    export LOCATION="westus"
     echo_warning "No resource group location [LOCATION] specified, defaulting to ${LOCATION}."
 fi
 
