@@ -24,7 +24,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [kube-deploy]
     steps:
     - name: check out repo
       uses: actions/checkout@v2
